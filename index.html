@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สุขสันต์วันแม่แห่งชาติ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;600&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Decoration -->
+    <div class="stars"></div>
+    
+    <header>
+        <div class="logo">🌸 รักแม่ที่สุดในโลก</div>
+        <nav>
+            <button class="nav-btn active" onclick="showTab('home')">หน้าแรก</button>
+            <button class="nav-btn" onclick="showTab('bless')">การ์ดอวยพร</button>
+            <button class="nav-btn" onclick="showTab('gallery')">อัลบั้มภาพ</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- เมนู 1: หน้าแรก -->
+        <section id="home" class="tab-content active">
+            <div class="hero">
+                <div class="jasmine-icon">🌺</div>
+                <h1>สุขสันต์วันแม่แห่งชาติ</h1>
+                <p>12 สิงหาคม — ขอกราบขอบพระคุณความรักอันยิ่งใหญ่ของแม่</p>
+                <button class="cta-btn" onclick="showTab('bless')">ส่งคำอวยพรให้แม่ ❤️</button>
+            </div>
+        </section>
+
+        <!-- เมนู 2: การ์ดอวยพร -->
+        <section id="bless" class="tab-content">
+            <div class="card-container">
+                <h2>คำอวยพรถึงคุณแม่</h2>
+                <p class="quote">"ความรักของแม่ เปรียบเสมือนแสงสว่างที่ไม่เคยดับในหัวใจของลูก"</p>
+                <form id="wishForm" onsubmit="addWish(event)">
+                    <input type="text" id="senderName" placeholder="ชื่อของลูก..." required>
+                    <textarea id="wishMessage" rows="4" placeholder="พิมพ์ข้อความกราบเท้าคุณแม่ตรงนี้..." required></textarea>
+                    <button type="submit" class="submit-btn">กราบอวยพร 🙏</button>
+                </form>
+                <div id="wishBoard" class="wish-board"></div>
+            </div>
+        </section>
+
+        <!-- เมนู 3: อัลบั้มภาพ -->
+        <section id="gallery" class="tab-content">
+            <h2>ความทรงจำแสนอบอุ่น</h2>
+            <div class="gallery-grid">
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="Mom & Child">
+                    <p>อ้อมกอดที่อบอุ่นที่สุด</p>
+                </div>
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Smile">
+                    <p>รอยยิ้มของแม่คือความสุขของลูก</p>
+                </div>
+                <div class="photo-card">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80" alt="Love">
+                    <p>ขอบคุณทุกความใส่ใจตลอดมา</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>สร้างด้วย ❤️ เพื่อคุณแม่ | สุขสันต์วันแม่แห่งชาติ</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
